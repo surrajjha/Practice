@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        button,
+        p {
+            width: 100px;
+            height: 60px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick='interval()'>Call Interval</button>
+    <br><br>
+    <button onclick='stop()'>Stop</button>
+    <p id='count'></p>
+    <script>
+        var x
+        var count = 0
+        var cont = document.getElementById('count')
+        cont.textContent = count
+
+
+        function interval() {
+            console.log('start of interval')
+            x = setInterval(function () {
+                count++;
+                cont.textContent = count
+            }, 1000)
+        }
+        function stop() {
+            console.log('start of stop')
+            clearInterval(x)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+grep Mumbai city_names_orders_rand.csv | wc -l
+

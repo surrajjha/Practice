@@ -1,0 +1,74 @@
+<html>
+    <head>
+<style>
+
+</style>
+    </head>
+    <body>
+   <form>
+        <body>
+            <div style="float: left">
+                <h1>Trip Details</h1>
+                <h2>car milage:20 miles/l</h2>
+                <div class="size">Date:</div>
+                <input type="text" id="date" class="details">
+                <div class="size">Filled Fuel:</div>
+                <input type="text" id="fuel" class="details">
+                <div class="size">Trip Name:</div>
+                <input type="text" id="tripName" class="details">
+                <div class="size">Distance:</div>
+                <input type="text" id="distance" class="details"><br><br>
+                <button id="submitBtn">Enter</button><br><br>
+                <button id="logsBtn">Logs </button>
+                <button onclick="getMileage()" id="mileageBtn">Mileage </button>
+            </div>
+            <div style="float:left">
+                    <div id="mileageDetails">Mileage Details:</div>
+                    <input type="text" id="milage">
+                    <div class="display"><b>Trip Logs:</b></div>
+                </div>
+                <script>
+                     function AddTrip(date, fuel, tripName, distance) {
+            this.date = date;
+            this.fuel = fuel;
+            this.tripName = tripName;
+            this.distance = distance;
+            this.getDetails = function () {
+                var output = '';
+                for (key in this) {
+                    if (key == 'getDetails') {
+                        break;
+                    }
+                    output += key + " : " + this[key] + "\n";
+                }
+                return output;
+            }
+        }
+        
+        var trips = [];
+        function createTrip() {
+            var inputs = document.querySelectorAll('.detais');
+            var newTrips = new Addtrip();
+            var c = 0;
+            for (key in newTrips) {
+                if (newTrips[key] == undefined) {
+                    newTrips[key] = inputs[c].value;
+                    inputs[c].value = '';
+                    c++;
+                }
+            }
+            trips.push(newTrips);
+        }
+        function displayAllTrips() {
+            var display = document.querySelector('.display');
+            for (var i = 0; i < trips.length; i++) {
+                var displayPara = document.createElement('p');
+                displayPara.textContent = tripsArr[i].getDetails();
+                display.appendChild(displayPara);
+            }
+        }
+
+                </script>
+   
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <hea></hea>
+    <body>
+<!----Name: <input id='root'></input><br>
+
+<button onclick='promise()'>Promise me</button>
+
+<div id='result'></div>
+<div id='total'></div>
+---->
+<table class="table">
+        <thead>
+          <tr>
+            <th scope="col">image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Other Details</th>
+           
+          </tr>
+        </thead>
+        <button onclick="promise()">Promise</button>
+        
+      </table>
+<script>
+    gitSearchUserAPI = 'https://api.github.com/search/issues?q=windows+label:bug+language:python+state:open&sort=created&order=asc'
+
+
+const promise = () => {
+  var x =  document.getElementsByTagName('class').value
+  var result = document.getElementById('result')
+    var total = document.getElementById('total')
+  console.log(x)
+  fetch(gitSearchUserAPI)
+  .then(response=>response.json())
+  // .then(response=>console.log(response))
+ // .then(res=>{
+         //     result.textContent=res.items[5].login+res.items[5].url
+         //    console.log(res)
+          //   total.textContent = res.total_count
+        //     })
+  .catch(err=>console.log(err))
+  
+}
+
+</script>
+</body>
+</html>

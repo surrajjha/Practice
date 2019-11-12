@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id='root'></div>
+
+    <button onclick="render()">RENDER</button>
+
+    <br>
+    <br>
+    <input id='val' />
+   <!---- <button onclick='masai_stack.push(document.getElementById("val").value)'>PUSH</button>
+    <button onclick='masai_stack.top()'>TOP</button>
+    <button onclick='masai_stack.remove()'>DELETE</button>
+   -->
+    <script>
+
+        class Header {
+            constructor(name,color,fontSize) {
+                this.name =name; 
+                this.color =color;
+                this.fontSize=fontSize;
+               // console.log(this)
+            }
+            render() {
+               // console.log('rendering')
+                this.displayName()
+                return `<h1> ${this.name} </h1>`
+
+            }
+         //   push(name) {
+             //   this.name[this.name.length] = name
+           //     this.displayName()
+          //      console.log(this.name)
+          //  }
+          //  top() {
+            //    console.log(this.name[this.name.length - 1])
+           // }
+          //  remove() {
+            //    this.name.pop()
+             //   this.displayName()
+                // console.log(this.name)
+           // }
+            displayName() {
+                console.log('display Name', this.name)
+               
+            }
+        }
+        var masai_stack = new Header('Suraj')
+
+        function render() {
+            cont = document.getElementById('root')
+            cont.innerHTML = masai_stack.render()
+            document.getElementById("root").style.color = "red";
+            document.getElementById("root").style.fontSize = "xx-large";
+            
+        }
+
+      //  var x = new Array(10).fill(0)
+       // console.log(x)
+        console.log(masai_stack.name)
+
+
+    </script>
+
+
+</body>
+
+</html>
