@@ -1,0 +1,14 @@
+.image-size{
+  width: 500px;
+  height:500px;
+  position: relative;
+  overflow: hidden;
+  margin:20px;
+}
+.globeHeight{
+  height:2px;
+
+}
+.image{
+  margin-left: 60px;
+}
