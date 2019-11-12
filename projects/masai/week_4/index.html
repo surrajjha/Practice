@@ -1,0 +1,40 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+            <script src="script.js"></script>
+            <select id="foodItems" >
+            <option class="items" value="select">Select Items</option>
+            <option class="items" value="planeDosa">planeDosa</option>
+            <option class="items" value="chickenMasala">chickenMasala</option>
+            <option class="items" value="paneerMasala">paneerMasala</option>
+            <option class="items" value="masalaDosa">masalaDosa</option>
+            <option class="items" value="butterPaneer">butterPaneer</option>
+            <option class="items" value="chickenKasha">chickenKasha</option>
+        </select>
+         
+            <div id="description">
+                <br>
+                <br>
+                Qty:<br>
+                <input type="number" id="qty" name="" value=""><br><br>
+                Cost:
+                <br>
+                <input type="number" id="cost" name="" value=""><br><br>
+                Tax:<br>
+                <input type="number" id="tax" name="" value=""><br><br>
+                 Discount:<br>
+                <input type="number" id="dicount" name="" value=""><br><br>
+                Tip:<br>
+                <input type="number" id="tip" name="" value=""><br><br>
+                <button id="bill" onclick="generateBill()">Generate Bill</button><br><br>
+                
+              </div>
+
+              
+            
+             <button onclick="displayitems()"></button>
+             <input type="number">
+              
+             <p id="result"></p>

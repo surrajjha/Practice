@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div class="card bg-dark text-white ">
+        <img src="https://images.unsplash.com/photo-1551633166-23c7aed83e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"
+            class="img-fluid">
+        <div class="card-img-overlay">
+            <div class="row">
+                <div class="col-md-4 offset-md-8">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Flights"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <p class="text-center font-weight-bolde">
+                <h1 class="display-4 text-center">Book Flight Tickets</h1>
+            </p>
+            <div class="col-md-12 col-md-offset-4">
+                <section id="first-tab-group" class="tabgroup">
+                    <div id="tab1">
+                        <div class="submit-form">
+                            <h4></h4>
+                            <form id="form-submit" action="" method="get">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                        <label for="from">From:</label>
+                                        <select required name='from' onchange='this.form.()'>
+                                            <option value="">Select a location...</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="India">India</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Korea">Korea</option>
+                                            <option value="Laos">Laos</option>
+                                            <option value="Myanmar">Myanmar</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <label for="to">To:</label>
+                                        <select required name='to' onchange='this.form.()'>
+                                            <option value="">Select a location...</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="India">India</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Korea">Korea</option>
+                                            <option value="Laos">Laos</option>
+                                            <option value="Myanmar">Myanmar</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <label for="departure">Departure date:</label>
+                                        <input name="departure" type="text" class="form-control date" id="datepicker-13"
+                                            placeholder="Select date..." required="">
+
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <label for="return">Return date:</label>
+                                        <input name="return" type="text" class="form-control date" id="datepicker-14"
+                                            placeholder="Select date..." required="">
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="radio-select">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6 col-xs-6 offset-md-8">
+                                                    <label for="round">Round</label>
+                                                    <input type="radio" name="trip" id="round" value="round"
+                                                        required="required" onchange='this.form.()'>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6  offset-md-8 ">
+                                                    <label for="oneway">Oneway</label>
+                                                    <input type="radio" name="trip" id="oneway" value="one-way"
+                                                        required="required" onchange='this.form.()'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                                </div>
+                        </div>
+                        </form>
+                        <a href="index2.html" class="btn btn-primary btn-lg active" role="button"
+                            aria-pressed="true">Book Tickets</a>
+
+                    </div>
+            </div>
+            </section>
+
+        </div>
+    </div>
+    </div>
+
+    </section>
+
+
+    <script>
+        $(function () {
+            $("#datepicker-13").datepicker();
+            $("#datepicker-13").datepicker("show");
+        });
+        $(function () {
+            $("#datepicker-14").datepicker();
+            $("#datepicker-14").datepicker("show");
+        });
+        
+      
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+#description {
+    margin-left:100px;
+}
+
+body {
+    background-image:url("https://images.unsplash.com/photo-1548940740-204726a19be3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1535&q=80");
+    position: relative;
+}
+#result{
+    margin-left:100px;  
+}
